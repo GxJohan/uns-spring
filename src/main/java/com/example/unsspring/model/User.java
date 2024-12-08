@@ -25,6 +25,10 @@ public class User {
     @Column(nullable = false, unique = true)
     private String username;
 
+    //add email column
+    @Column(nullable = false, unique = true)
+    private String email;
+
     @Column(nullable = false)
     private String password;
 
@@ -66,6 +70,15 @@ public class User {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    //add email getter and setter
+    public String getEmail() {
+        return email;
+    }
+    //add set email
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     // Getters y Setters
